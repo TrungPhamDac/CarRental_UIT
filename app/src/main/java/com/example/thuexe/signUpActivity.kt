@@ -18,7 +18,7 @@ class signUpActivity : AppCompatActivity() {
     private lateinit var signUpButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.sign_up_layout)
+        setContentView(R.layout.new_sign_up_layout_v2)
 
         nameSignUp = findViewById(R.id.nameSignUp)
         emailSignUp = findViewById(R.id.emailSignUp)
