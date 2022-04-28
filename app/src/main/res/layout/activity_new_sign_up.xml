@@ -1,122 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".new_signUp_activity"
     android:background="@color/white">
+
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:id="@+id/appIcon_signUp"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/car"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <TextView
+        android:id="@+id/signUp_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="đăng ký"
+        app:layout_constraintTop_toBottomOf="@id/appIcon_signUp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAllCaps="true"
+        android:textSize="@dimen/text_size_4"
+        android:textColor="@color/red"/>
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/usernameInputContainer"
+        android:id="@+id/container_usernameSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:helperText="@string/required"
+        android:minHeight="48dp"
+        app:helperText="Required"
         app:helperTextTextColor="@android:color/holo_red_dark"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signUp_header"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="40dp"
-        android:textColorHint="#acacb4">
+        android:textColorHint="#7c7c7c">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/usernameInputEditText"
+            android:id="@+id/Input_usernameSignUp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
+            android:layout_height="match_parent"
+            android:background="@color/white"
             android:hint="Họ và tên"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailInputContainer"
+        android:id="@+id/container_phoneNumberSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:helperText="@string/required"
-        app:helperTextTextColor="@android:color/holo_red_dark"
+        android:minHeight="48dp"
+        app:helperText="Required"
+        app:helperTextTextColor="@color/red"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/usernameInputContainer"
+        app:layout_constraintTop_toBottomOf="@id/container_usernameSignUp"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
-        android:textColorHint="#acacb4">
+        android:textColorHint="#7c7c7c">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailInputEditText"
+            android:id="@+id/Input_phoneNumberSignUp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="Email"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/phoneNumberInputContainer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:helperText="@string/required"
-        app:helperTextTextColor="@android:color/holo_red_dark"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emailInputContainer"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
-        android:textColorHint="#acacb4">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/phoneNumberInputEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="phone"
+            android:layout_height="match_parent"
+            android:background="@color/white"
             android:hint="Số điện thoại"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordInputContainer"
+        android:id="@+id/container_emailSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:helperText="@string/required"
+        android:minHeight="48dp"
+        app:helperText="Required"
         app:helperTextTextColor="@android:color/holo_red_dark"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/phoneNumberInputContainer"
-        app:passwordToggleEnabled="true"
-        app:passwordToggleTint="#acacb4"
+        app:layout_constraintTop_toBottomOf="@id/container_phoneNumberSignUp"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
-        android:textColorHint="#acacb4">
+        android:textColorHint="#7c7c7c">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passwordInputEditText"
+            android:id="@+id/Input_emailSignUp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:hint="Email"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/container_passwordSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:helperText="Required"
+        app:helperTextTextColor="@android:color/holo_red_dark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_emailSignUp"
+        android:layout_marginHorizontal="20dp"
+        android:textColorHint="#7c7c7c">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Input_paswordSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
             android:hint="Mật khẩu"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/retypePasswordContainer"
+        android:id="@+id/container_retypePassSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:helperText="@string/required"
+        android:minHeight="48dp"
+        app:helperText="Required"
         app:helperTextTextColor="@android:color/holo_red_dark"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:passwordToggleEnabled="true"
-        app:passwordToggleTint="#acacb4"
-        app:layout_constraintTop_toBottomOf="@id/passwordInputContainer"
+        app:layout_constraintTop_toBottomOf="@id/container_passwordSignUp"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
-        android:textColorHint="#acacb4">
+        android:textColorHint="#7c7c7c">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/retypePasswordEditText"
+            android:id="@+id/Input_retypePassSignUp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
+            android:layout_height="match_parent"
+            android:background="@color/white"
             android:hint="Nhập lại mật khẩu"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/blue"
-        android:text="Đăng ký"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_retypePassSignUp"
         android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/retypePasswordContainer" />
-
+        android:text="Đăng Ký"
+        android:textSize="24dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
